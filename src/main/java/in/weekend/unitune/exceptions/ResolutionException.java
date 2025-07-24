@@ -1,0 +1,6 @@
+package in.weekend.unitune.exceptions;
+
+public class ResolutionException extends RuntimeException {
+    public ResolutionException(String message) { super(message); }
+    public ResolutionException(String message, Throwable cause) { super(message, cause); }
+}

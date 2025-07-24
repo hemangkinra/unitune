@@ -1,0 +1,55 @@
+spring:
+  application:
+    name: unitune
+
+  redis:
+    host: localhost
+    port: 6379
+
+  data:
+    mongodb:
+      uri: "mongodb://localhost:27017/unitune"
+
+server:
+  port: 8010
+
+logging:
+  level:
+    root: "INFO"
+    in.weekend.unitune: "DEBUG"
+
+
+snowflake:
+  worker-id: 99
+
+
+unitune:
+  db:
+    collections:
+      UniversalMusicLink: UniversalMusicLink
+
+
+external:
+  http:
+    apple-music:
+      base-url: "https://itunes.apple.com"
+      search-music-endpoint: "/search"
+      fetch-music-detail-endpoint: "/lookup"
+    jio-saavn:
+      base-url: "http://localhost:3000/api"
+      search-music-endpoint: "/search/songs"
+      fetch-music-detail-endpoint: "/songs"
+    spotify:
+      token-generation-host: "https://accounts.spotify.com"
+      token-generation-endpoint: "/api/token"
+      client-id: ${SPOTIFY_CLIENT_ID}
+      client-secret: ${SPOTIFY_CLIENT_SECRET}
+      base-url: "https://api.spotify.com"
+      search-music-endpoint: "/v1/search"
+      fetch-music-detail-endpoint: "v1/tracks"
+    youtube-music:
+      base-url: "http://localhost:8000"
+      search-music-endpoint: "/search"
+      fetch-music-detail-endpoint: "/song"
+
+
