@@ -72,7 +72,7 @@ public abstract class AbstractRedisRepository<T> {
     public Flux<T> findAllById(Collection<String> ids) {
         List<String> keys = ids.stream()
                 .map(this::buildKey)
-                .collect(java.util.stream.Collectors.toList());
+                .toList();
 
         return redisTemplate.opsForValue()
                 .multiGet(keys)

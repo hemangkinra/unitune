@@ -1,0 +1,32 @@
+# Ignore build artifacts
+/build
+/build.gradle.kts
+/gradlew
+/gradlew.bat
+/gradle/
+
+# Ignore IDE files
+*.iml
+.idea/
+*.ipr
+*.iws
+*.class
+
+# Ignore logs
+*.log
+
+# Ignore OS or tooling junk
+.DS_Store
+Thumbs.db
+
+# Ignore test results
+/test-results
+/out
+/.settings/
+
+# Ignore Git files
+.git
+.gitignore
+
+# Ignore environment files
+.env

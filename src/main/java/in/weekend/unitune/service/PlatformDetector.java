@@ -5,7 +5,7 @@ import in.weekend.unitune.enums.PlatformType;
 import in.weekend.unitune.exceptions.UnsupportedPlatformException;
 import org.springframework.stereotype.Service;
 
-import java.util.HashMap;
+import java.util.EnumMap;
 import java.util.Map;
 import java.util.regex.Pattern;
 
@@ -28,7 +28,7 @@ public class PlatformDetector {
     }
 
     private Map<PlatformType, Pattern> initializePlatformPatterns() {
-        Map<PlatformType, Pattern> patterns = new HashMap<>();
+        Map<PlatformType, Pattern> patterns = new EnumMap<>(PlatformType.class);
 
         patterns.put(PlatformType.SPOTIFY,
                 Pattern.compile("(open\\.)?spotify\\.com/.+"));
