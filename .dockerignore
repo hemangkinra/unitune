@@ -1,5 +1,5 @@
 # Ignore build artifacts
-/build
+# /build
 /build.gradle.kts
 /gradlew
 /gradlew.bat
